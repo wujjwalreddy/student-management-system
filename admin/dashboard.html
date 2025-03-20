@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Student Management System</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h3>Admin Panel</h3>
+            </div>
+            <div class="sidebar-menu">
+                <a href="dashboard.html" class="menu-item active">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="students.html" class="menu-item">
+                    <i class="fas fa-user-graduate"></i>
+                    <span>Students</span>
+                </a>
+                <a href="faculty.html" class="menu-item">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <span>Faculty</span>
+                </a>
+                <a href="courses.html" class="menu-item">
+                    <i class="fas fa-book"></i>
+                    <span>Courses</span>
+                </a>
+                <a href="attendance.html" class="menu-item">
+                    <i class="fas fa-clipboard-check"></i>
+                    <span>Attendance</span>
+                </a>
+                <a href="grades.html" class="menu-item">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Grades</span>
+                </a>
+                <a href="assignments.html" class="menu-item">
+                    <i class="fas fa-tasks"></i>
+                    <span>Assignments</span>
+                </a>
+                <a href="reports.html" class="menu-item">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Reports</span>
+                </a>
+                <a href="../index.html" class="menu-item">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="header">
+                <h1>Dashboard</h1>
+                <div class="user-info">
+                    <img src="/placeholder.svg?height=40&width=40" alt="Admin">
+                    <div>
+                        <h4>Admin User</h4>
+                        <small>Administrator</small>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dashboard-cards">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Students</div>
+                        <div class="card-icon bg-primary">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                    </div>
+                    <div class="card-value">250</div>
+                    <div class="card-label">Total Students</div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Faculty</div>
+                        <div class="card-icon bg-success">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                    </div>
+                    <div class="card-value">32</div>
+                    <div class="card-label">Total Faculty</div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Courses</div>
+                        <div class="card-icon bg-warning">
+                            <i class="fas fa-book"></i>
+                        </div>
+                    </div>
+                    <div class="card-value">45</div>
+                    <div class="card-label">Active Courses</div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Assignments</div>
+                        <div class="card-icon bg-info">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                    </div>
+                    <div class="card-value">128</div>
+                    <div class="card-label">Pending Review</div>
+                </div>
+            </div>
+            
+            <div class="table-container">
+                <div class="table-header">
+                    <h3>Recent Enrollments</h3>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Student Name</th>
+                            <th>Course</th>
+                            <th>Enrollment Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recentEnrollments">
+                        <tr>
+                            <td>1001</td>
+                            <td>John Doe</td>
+                            <td>Computer Science</td>
+                            <td>2023-08-15</td>
+                            <td>Active</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn btn-view"><i class="fas fa-eye"></i></button>
+                                    <button class="btn btn-edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn btn-delete"><i class="fas fa-trash"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1002</td>
+                            <td>Jane Smith</td>
+                            <td>Business Administration</td>
+                            <td>2023-08-14</td>
+                            <td>Active</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn btn-view"><i class="fas fa-eye"></i></button>
+                                    <button class="btn btn-edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn btn-delete"><i class="fas fa-trash"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1003</td>
+                            <td>Michael Johnson</td>
+                            <td>Electrical Engineering</td>
+                            <td>2023-08-12</td>
+                            <td>Pending</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn btn-view"><i class="fas fa-eye"></i></button>
+                                    <button class="btn btn-edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn btn-delete"><i class="fas fa-trash"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1004</td>
+                            <td>Emily Davis</td>
+                            <td>Psychology</td>
+                            <td>2023-08-10</td>
+                            <td>Active</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn btn-view"><i class="fas fa-eye"></i></button>
+                                    <button class="btn btn-edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn btn-delete"><i class="fas fa-trash"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1005</td>
+                            <td>Robert Wilson</td>
+                            <td>Mathematics</td>
+                            <td>2023-08-09</td>
+                            <td>Active</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn btn-view"><i class="fas fa-eye"></i></button>
+                                    <button class="btn btn-edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn btn-delete"><i class="fas fa-trash"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="table-container">
+                <div class="table-header">
+                    <h3>Recent Activities</h3>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>User</th>
+                            <th>Activity</th>
+                            <th>Date & Time</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recentActivities">
+                        <tr>
+                            <td>Admin</td>
+                            <td>Added new course: Advanced Web Development</td>
+                            <td>2023-08-15 14:30:45</td>
+                        </tr>
+                        <tr>
+                            <td>Prof. Williams</td>
+                            <td>Updated grades for Database Management</td>
+                            <td>2023-08-15 13:22:10</td>
+                        </tr>
+                        <tr>
+                            <td>Admin</td>
+                            <td>Added new faculty: Dr. Sarah Johnson</td>
+                            <td>2023-08-15 11:05:32</td>
+                        </tr>
+                        <tr>
+                            <td>Prof. Anderson</td>
+                            <td>Marked attendance for Artificial Intelligence</td>
+                            <td>2023-08-15 09:15:00</td>
+                        </tr>
+                        <tr>
+                            <td>Admin</td>
+                            <td>Generated semester report</td>
+                            <td>2023-08-14 16:45:22</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/admin.js"></script>
+</body>
+</html>
+

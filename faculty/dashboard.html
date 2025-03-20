@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Dashboard | Student Management System</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h3>Faculty Panel</h3>
+            </div>
+            <div class="sidebar-menu">
+                <a href="dashboard.html" class="menu-item active">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="students.html" class="menu-item">
+                    <i class="fas fa-user-graduate"></i>
+                    <span>My Students</span>
+                </a>
+                <a href="courses.html" class="menu-item">
+                    <i class="fas fa-book"></i>
+                    <span>My Courses</span>
+                </a>
+                <a href="attendance.html" class="menu-item">
+                    <i class="fas fa-clipboard-check"></i>
+                    <span>Attendance</span>
+                </a>
+                <a href="grades.html" class="menu-item">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Grades</span>
+                </a>
+                <a href="assignments.html" class="menu-item">
+                    <i class="fas fa-tasks"></i>
+                    <span>Assignments</span>
+                </a>
+                <a href="profile.html" class="menu-item">
+                    <i class="fas fa-user"></i>
+                    <span>My Profile</span>
+                </a>
+                <a href="../index.html" class="menu-item">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="header">
+                <h1>Faculty Dashboard</h1>
+                <div class="user-info">
+                    <img src="/placeholder.svg?height=40&width=40" alt="Faculty">
+                    <div>
+                        <h4>Dr. Robert Williams</h4>
+                        <small>Professor</small>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dashboard-cards">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">My Courses</div>
+                        <div class="card-icon bg-primary">
+                            <i class="fas fa-book"></i>
+                        </div>
+                    </div>
+                    <div class="card-value">3</div>
+                    <div class="card-label">Active Courses</div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Students</div>
+                        <div class="card-icon bg-success">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                    </div>
+                    <div class="card-value">78</div>
+                    <div class="card-label">Enrolled Students</div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Assignments</div>
+                        <div class="card-icon bg-warning">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                    </div>
+                    <div class="card-value">12</div>
+                    <div class="card-label">Pending Review</div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Attendance</div>
+                        <div class="card-icon bg-info">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                    </div>
+                    <div class="card-value">92%</div>
+                    <div class="card-label">Average Attendance</div>
+                </div>
+            </div>
+            
+            <div class="table-container">
+                <div class="table-header">
+                    <h3>My Courses</h3>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Course Code</th>
+                            <th>Course Name</th>
+                            <th>Schedule</th>
+                            <th>Students</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CS101</td>
+                            <td>Introduction to Programming</td>
+                            <td>Mon, Wed, Fri 10:00 AM - 11:30 AM</td>
+                            <td>35</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn btn-view">View Details</button>
+                                    <button class="btn btn-edit">Take Attendance</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>CS301</td>
+                            <td>Database Management</td>
+                            <td>Tue, Thu 1:00 PM - 3:00 PM</td>
+                            <td>28</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn btn-view">View Details</button>
+                                    <button class="btn btn-edit">Take Attendance</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>CS401</td>
+                            <td>Advanced Web Development</td>
+                            <td>Mon, Wed 3:30 PM - 5:30 PM</td>
+                            <td>15</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn btn-view">View Details</button>
+                                    <button class="btn btn-edit">Take Attendance</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="table-container">
+                <div class="table-header">
+                    <h3>Recent Assignments</h3>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Assignment</th>
+                            <th>Course</th>
+                            <th>Due Date</th>
+                            <th>Submissions</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Project Proposal</td>
+                            <td>Advanced Web Development</td>
+                            <td>2023-08-20</td>
+                            <td>10/15</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn btn-view">View Submissions</button>
+                                    <button class="btn btn-edit">Edit Assignment</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Database Design</td>
+                            <td>Database Management</td>
+                            <td>2023-08-18</td>
+                            <td>22/28</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn btn-view">View Submissions</button>
+                                    <button class="btn btn-edit">Edit Assignment</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Programming Exercise 3</td>
+                            <td>Introduction to Programming</td>
+                            <td>2023-08-15</td>
+                            <td>30/35</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn btn-view">View Submissions</button>
+                                    <button class="btn btn-edit">Edit Assignment</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/faculty-dashboard.js"></script>
+</body>
+</html>
+

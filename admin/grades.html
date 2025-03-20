@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Management | Admin Panel</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h3>Admin Panel</h3>
+            </div>
+            <div class="sidebar-menu">
+                <a href="dashboard.html" class="menu-item">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="students.html" class="menu-item">
+                    <i class="fas fa-user-graduate"></i>
+                    <span>Students</span>
+                </a>
+                <a href="faculty.html" class="menu-item">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <span>Faculty</span>
+                </a>
+                <a href="courses.html" class="menu-item">
+                    <i class="fas fa-book"></i>
+                    <span>Courses</span>
+                </a>
+                <a href="attendance.html" class="menu-item">
+                    <i class="fas fa-clipboard-check"></i>
+                    <span>Attendance</span>
+                </a>
+                <a href="grades.html" class="menu-item active">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Grades</span>
+                </a>
+                <a href="assignments.html" class="menu-item">
+                    <i class="fas fa-tasks"></i>
+                    <span>Assignments</span>
+                </a>
+                <a href="reports.html" class="menu-item">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Reports</span>
+                </a>
+                <a href="../index.html" class="menu-item">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="header">
+                <h1>Grade Management</h1>
+                <div class="user-info">
+                    <img src="/placeholder.svg?height=40&width=40" alt="Admin">
+                    <div>
+                        <h4>Admin User</h4>
+                        <small>Administrator</small>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-container">
+                <h2 class="form-title">Filter Grade Records</h2>
+                <form id="filterGradesForm">
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="courseFilter">Course</label>
+                                <select id="courseFilter" name="courseFilter">
+                                    <option value="">All Courses</option>
+                                    <!-- Course options will be loaded here -->
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="facultyFilter">Faculty</label>
+                                <select id="facultyFilter" name="facultyFilter">
+                                    <option value="">All Faculty</option>
+                                    <!-- Faculty options will be loaded here -->
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="examTypeFilter">Exam Type</label>
+                                <select id="examTypeFilter" name="examTypeFilter">
+                                    <option value="">All Types</option>
+                                    <option value="quiz">Quiz</option>
+                                    <option value="midterm">Midterm</option>
+                                    <option value="final">Final</option>
+                                    <option value="assignment">Assignment</option>
+                                    <option value="project">Project</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="gradeFilter">Grade</label>
+                                <select id="gradeFilter" name="gradeFilter">
+                                    <option value="">All Grades</option>
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                    <option value="C">C</option>
+                                    <option value="D">D</option>
+                                    <option value="F">F</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" class="btn-primary">Apply Filters</button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="table-container">
+                <div class="table-header">
+                    <h3>Grade Records</h3>
+                    <div>
+                        <input type="text" id="searchGrades" placeholder="Search..." style="padding: 8px; border-radius: 4px; border: 1px solid #ddd;">
+                    </div>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Course</th>
+                            <th>Exam Type</th>
+                            <th>Faculty</th>
+                            <th>Date</th>
+                            <th>Average</th>
+                            <th>Highest</th>
+                            <th>Lowest</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="gradeRecords">
+                        <!-- Grade records will be loaded here -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="table-container" id="gradeDetailsContainer" style="display: none;">
+                <div class="table-header">
+                    <h3>Grade Details: <span id="gradeDetailsTitle"></span></h3>
+                    <button id="backToGradesBtn" class="btn-primary">Back to Records</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Student Name</th>
+                            <th>Marks Obtained</th>
+                            <th>Total Marks</th>
+                            <th>Grade</th>
+                            <th>Remarks</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="gradeDetailsList">
+                        <!-- Grade details will be loaded here -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="dashboard-cards">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Overall GPA</div>
+                        <div class="card-icon bg-primary">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </div>
+                    <div class="card-value" id="overallGPA">0.0</div>
+                    <div class="card-label">Average GPA</div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">A Grades</div>
+                        <div class="card-icon bg-success">
+                            <i class="fas fa-award"></i>
+                        </div>
+                    </div>
+                    <div class="card-value" id="aGradesCount">0</div>
+                    <div class="card-label">Total A Grades</div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Failed</div>
+                        <div class="card-icon bg-danger">
+                            <i class="fas fa-times-circle"></i>
+                        </div>
+                    </div>
+                    <div class="card-value" id="failedCount">0</div>
+                    <div class="card-label">Total Failed</div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Exams</div>
+                        <div class="card-icon bg-info">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                    </div>
+                    <div class="card-value" id="examCount">0</div>
+                    <div class="card-label">Total Exams</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/admin-grades.js"></script>
+</body>
+</html>
+

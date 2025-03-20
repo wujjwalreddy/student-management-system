@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Courses | Faculty Panel</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h3>Faculty Panel</h3>
+            </div>
+            <div class="sidebar-menu">
+                <a href="dashboard.html" class="menu-item">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="students.html" class="menu-item">
+                    <i class="fas fa-user-graduate"></i>
+                    <span>My Students</span>
+                </a>
+                <a href="courses.html" class="menu-item active">
+                    <i class="fas fa-book"></i>
+                    <span>My Courses</span>
+                </a>
+                <a href="attendance.html" class="menu-item">
+                    <i class="fas fa-clipboard-check"></i>
+                    <span>Attendance</span>
+                </a>
+                <a href="grades.html" class="menu-item">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Grades</span>
+                </a>
+                <a href="assignments.html" class="menu-item">
+                    <i class="fas fa-tasks"></i>
+                    <span>Assignments</span>
+                </a>
+                <a href="profile.html" class="menu-item">
+                    <i class="fas fa-user"></i>
+                    <span>My Profile</span>
+                </a>
+                <a href="../index.html" class="menu-item">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="header">
+                <h1>My Courses</h1>
+                <div class="user-info">
+                    <img src="/placeholder.svg?height=40&width=40" alt="Faculty">
+                    <div>
+                        <h4 id="facultyName">Dr. Robert Williams</h4>
+                        <small id="facultyDesignation">Professor</small>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="table-container">
+                <div class="table-header">
+                    <h3>Courses I Teach</h3>
+                    <div>
+                        <input type="text" id="searchCourse" placeholder="Search courses..." style="padding: 8px; border-radius: 4px; border: 1px solid #ddd;">
+                    </div>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Course Code</th>
+                            <th>Course Name</th>
+                            <th>Schedule</th>
+                            <th>Students</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="coursesList">
+                        <!-- Course data will be loaded here -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="form-container">
+                <h2 class="form-title">Course Details</h2>
+                <div id="courseDetails">
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label>Course Code:</label>
+                                <p id="detailCourseCode">-</p>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label>Course Name:</label>
+                                <p id="detailCourseName">-</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label>Department:</label>
+                                <p id="detailDepartment">-</p>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label>Credits:</label>
+                                <p id="detailCredits">-</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label>Schedule:</label>
+                                <p id="detailSchedule">-</p>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label>Semester:</label>
+                                <p id="detailSemester">-</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label>Start Date:</label>
+                                <p id="detailStartDate">-</p>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label>End Date:</label>
+                                <p id="detailEndDate">-</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Description:</label>
+                        <p id="detailDescription">-</p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button id="viewStudentsBtn" class="btn-primary">View Enrolled Students</button>
+                        <button id="createAssignmentBtn" class="btn-primary">Create Assignment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/faculty-courses.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard | Student Management System</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h3>Student Panel</h3>
+            </div>
+            <div class="sidebar-menu">
+                <a href="dashboard.html" class="menu-item active">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="courses.html" class="menu-item">
+                    <i class="fas fa-book"></i>
+                    <span>My Courses</span>
+                </a>
+                <a href="attendance.html" class="menu-item">
+                    <i class="fas fa-clipboard-check"></i>
+                    <span>Attendance</span>
+                </a>
+                <a href="grades.html" class="menu-item">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Grades</span>
+                </a>
+                <a href="assignments.html" class="menu-item">
+                    <i class="fas fa-tasks"></i>
+                    <span>Assignments</span>
+                </a>
+                <a href="profile.html" class="menu-item">
+                    <i class="fas fa-user"></i>
+                    <span>My Profile</span>
+                </a>
+                <a href="../index.html" class="menu-item">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="header">
+                <h1>Student Dashboard</h1>
+                <div class="user-info">
+                    <img src="/placeholder.svg?height=40&width=40" alt="Student">
+                    <div>
+                        <h4>John Doe</h4>
+                        <small>Student ID: S1001</small>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dashboard-cards">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">My Courses</div>
+                        <div class="card-icon bg-primary">
+                            <i class="fas fa-book"></i>
+                        </div>
+                    </div>
+                    <div class="card-value">4</div>
+                    <div class="card-label">Enrolled Courses</div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Attendance</div>
+                        <div class="card-icon bg-success">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                    </div>
+                    <div class="card-value">95%</div>
+                    <div class="card-label">Overall Attendance</div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Assignments</div>
+                        <div class="card-icon bg-warning">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                    </div>
+                    <div class="card-value">3</div>
+                    <div class="card-label">Pending Assignments</div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">GPA</div>
+                        <div class="card-icon bg-info">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </div>
+                    <div class="card-value">3.8</div>
+                    <div class="card-label">Current GPA</div>
+                </div>
+            </div>
+            
+            <div class="table-container">
+                <div class="table-header">
+                    <h3>My Courses</h3>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Course Code</th>
+                            <th>Course Name</th>
+                            <th>Instructor</th>
+                            <th>Schedule</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CS101</td>
+                            <td>Introduction to Programming</td>
+                            <td>Dr. Robert Williams</td>
+                            <td>Mon, Wed, Fri 10:00 AM - 11:30 AM</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn btn-view">View Details</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>BUS201</td>
+                            <td>Business Management</td>
+                            <td>Dr. Sarah Johnson</td>
+                            <td>Tue, Thu 9:00 AM - 10:30 AM</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn btn-view">View Details</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>MATH150</td>
+                            <td>Calculus I</td>
+                            <td>Prof. Michael Brown</td>
+                            <td>Mon, Wed 1:00 PM - 2:30 PM</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn btn-view">View Details</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>ENG101</td>
+                            <td>English Composition</td>
+                            <td>Prof. Lisa Taylor</td>
+                            <td>Tue, Thu 11:00 AM - 12:30 PM</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn btn-view">View Details</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="table-container">
+                <div class="table-header">
+                    <h3>Upcoming Assignments</h3>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Assignment</th>
+                            <th>Course</th>
+                            <th>Due Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Programming Exercise 3</td>
+                            <td>Introduction to Programming</td>
+                            <td>2023-08-15</td>
+                            <td>Pending</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn btn-view">View Details</button>
+                                    <button class="btn btn-edit">Submit</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Case Study Analysis</td>
+                            <td>Business Management</td>
+                            <td>2023-08-18</td>
+                            <td>Pending</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn btn-view">View Details</button>
+                                    <button class="btn btn-edit">Submit</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Calculus Problem Set</td>
+                            <td>Calculus I</td>
+                            <td>2023-08-20</td>
+                            <td>Pending</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn btn-view">View Details</button>
+                                    <button class="btn btn-edit">Submit</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/student-dashboard.js"></script>
+</body>
+</html>
+
